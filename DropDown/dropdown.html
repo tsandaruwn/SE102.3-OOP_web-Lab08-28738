@@ -1,0 +1,30 @@
+
+<html>
+<head>
+    <title>Remove Items from Dropdown List</title>
+</head>
+<body>
+    <h1>Dropdown List</h1>
+    <select id="myDropdown">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+        <option value="5">Option 5</option>
+    </select>
+
+    <button onclick="removeSelectedItems()">Remove Selected Items</button>
+
+    <script>
+        function removeSelectedItems() {
+            const dropdown = document.getElementById("myDropdown");
+            const selectedOptions = dropdown.querySelectorAll("option:checked");
+
+            // Remove each selected option
+            selectedOptions.forEach((option) => {
+                dropdown.removeChild(option);
+            });
+        }
+    </script>
+</body>
+</html>
